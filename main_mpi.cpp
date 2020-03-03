@@ -2,7 +2,7 @@
 #include "Matrix.h"
 #include "Vector.h"
 
-const double eps = 0.5e-5;
+const double eps = 0.3e-5;
 
 int main(int argc, char **argv) {
 

@@ -99,14 +99,14 @@ public:
 };
 
 int main(int argc, char **argv) {
+
+    srand(time(nullptr));
     int n = (argc >= 2) ? atoi(argv[1]) : 20;
     std::string filename = (argc == 3) ? argv[2] : "test.txt";
 
     std::cout << "First param = size, second = filename" << std::endl;
 
     std::cout << "N = " << n << std::endl;
-
-    srand(time(0));
 
     Matrix A(n);
     std::cout << "Starting.." << std::endl;

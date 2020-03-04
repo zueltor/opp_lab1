@@ -22,7 +22,7 @@ int main(int argc, char **argv) {
     MPIMatrix A(N, size, rank);
 
     std::string filename = (argc == 3) ? argv[2] : "test.txt";
-    A.fread(filename.c_str());
+    A.fread(filename);
     Vector b = A * u;
     Vector x(N, 0);
     Vector r = b - A * x;

@@ -4,8 +4,6 @@
 const double eps = 0.3e-5;
 
 int main(int argc, char **argv) {
-    srand(time(nullptr));
-    int rank, size;
     int N = (argc >= 2) ? atoi(argv[1]) : 2048;
     std::string filename = (argc == 3) ? argv[2] : "test.txt";
     Vector u(N, 1); //u=(1,1..,1)
@@ -13,7 +11,7 @@ int main(int argc, char **argv) {
 
     std::cout << "Assuming matrix size = " << N << std::endl;
 
-    A.fread(filename.c_str());
+    A.fread(filename);
 
     Vector b = A * u;
     Vector x(N, 0);

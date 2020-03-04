@@ -4,7 +4,6 @@
 
 #include "Matrix_s.h"
 
-
 void Matrix::fread(const std::string &filename) {
     std::ifstream is(filename);
     std::string s;
@@ -26,29 +25,6 @@ Matrix::Matrix(int size) {
             a[i][j] = 0;
         }
     }
-}
-
-Matrix::Matrix(const Matrix &m) {
-    n = m.n;
-    a = new double *[n];
-    for (int i = 0; i < n; i++) {
-        a[i] = new double[n];
-        for (int j = 0; j < n; j++) {
-            a[i][j] = m.a[i][j];
-        }
-    }
-}
-
-Matrix &Matrix::operator=(const Matrix &m) {
-    if (this != &m) {
-        for (int i = 0; i < n; i++) {
-            a[i] = new double[n];
-            for (int j = 0; j < n; j++) {
-                a[i][j] = m.a[i][j];
-            }
-        }
-    }
-    return *this;
 }
 
 Vector Matrix::operator*(const Vector &v) {

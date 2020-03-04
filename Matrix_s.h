@@ -18,10 +18,6 @@ public:
 
     void fread(const std::string &filename);
 
-    Matrix(const Matrix &m);
-
-    Matrix &operator=(const Matrix &m);
-
     Vector operator*(const Vector &v);
 
     ~Matrix();
